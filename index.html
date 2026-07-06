@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Soporte Informático - Turnos</title>
+
+<link rel="stylesheet" href="css/styles.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <img src="imagenes/logo.png" class="logo" alt="logo">
+
+    <h1>
+        <i class="fa-solid fa-headset"></i>
+        SOPORTE EVENTOS
+    </h1>
+
+    <button id="btnAdmin">
+        <i class="fa-solid fa-gear"></i>
+    </button>
+
+</header>
+
+<main>
+
+    <div class="hora">
+
+        <h2 id="horaActual"></h2>
+
+        <div id="fechaActual"></div>
+
+    </div>
+
+    <div id="estado" class="estado"></div>
+
+    <section id="contenedorTurnos">
+
+        <div class="card" id="cardManana">
+
+            <h2>🌞 Turno Mañana</h2>
+
+            <div class="persona">
+
+                <h3>Soporte Eventos</h3>
+
+                <p id="mananaTitular"></p>
+
+            </div>
+
+            <div class="persona">
+
+                <h3>Soporte Eventos</h3>
+
+                <p id="mananaApoyo"></p>
+
+            </div>
+
+        </div>
+
+        <div class="card" id="cardTarde">
+
+            <h2>🌙 Turno Tarde</h2>
+
+            <div class="persona">
+
+                <h3>Soporte Eventos</h3>
+
+                <p id="tardeTitular"></p>
+
+            </div>
+
+            <div class="persona">
+
+                <h3>Soporte Eventos</h3>
+
+                <p id="tardeApoyo"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+
+    <!-- BOTÓN ACTUALIZAR -->
+
+    <div class="contenedorBoton">
+
+        <button id="btnActualizar" class="btnActualizar">
+
+            <i class="fa-solid fa-rotate-right"></i>
+
+            Actualizar Información
+
+        </button>
+
+    </div>
+
+    <div class="actualizacion">
+
+        Última actualización
+
+        <br>
+
+        <span id="ultimaActualizacion"></span>
+
+    </div>
+
+</main>
+
+<script src="js/app.js"></script>
+
+
+
+<div class="footer-index">
+   © 2026 Support Events Dashboard • Designed & Developed for
+    <a href="https://www.nos.pucp.edu.pe/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="footer-link">NOS PUCP</a>
+    <br>
+    <span class="footer-signature">Crafted by Waleru</span>
+</div>
+
+
+</body>
+
+
+
+</html>
