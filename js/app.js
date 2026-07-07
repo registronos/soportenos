@@ -129,20 +129,69 @@ function detectarTurno() {
     const cardManana = document.getElementById("cardManana");
     const cardTarde = document.getElementById("cardTarde");
     const estado = document.getElementById("estado");
+    const sinPersonal = document.getElementById("sinPersonal");
+
+    // Restablecer estado
+    sinPersonal.classList.add("oculto");
 
     cardManana.classList.remove("activo");
     cardTarde.classList.remove("activo");
 
+    cardManana.style.display = "block";
+    cardTarde.style.display = "block";
+
+    // ===============================
+    // 07:00 - 13:59 -> SOLO MAÑANA
+    // ===============================
     if (hora >= 7 && hora < 14) {
 
+        cardTarde.style.display = "none";
+
         cardManana.classList.add("activo");
+
         estado.innerHTML = "🟢 Turno actual: MAÑANA";
 
-    } else {
+    }
+
+    // ===============================
+    // 14:00 - 15:59 -> AMBOS
+    // ===============================
+    else if (hora >= 14 && hora < 16) {
+
+        cardManana.classList.add("activo");
+        cardTarde.classList.add("activo");
+
+        estado.innerHTML = "🟢 Turno actual: MAÑANA Y TARDE";
+
+    }
+
+    // ===============================
+    // 16:00 - 22:59 -> SOLO TARDE
+    // ===============================
+    else if (hora >= 16 && hora < 23) {
+
+        cardManana.style.display = "none";
 
         cardTarde.classList.add("activo");
+
         estado.innerHTML = "🌙 Turno actual: TARDE";
+
     }
+
+    // ===============================
+    // 23:00 - 06:59 -> SIN PERSONAL
+    // ===============================
+    else {
+
+        cardManana.style.display = "none";
+        cardTarde.style.display = "none";
+
+        sinPersonal.classList.remove("oculto");
+
+        estado.innerHTML = "⚪ Fuera de horario - Sin personal";
+
+    }
+
 }
 
 // ===============================
